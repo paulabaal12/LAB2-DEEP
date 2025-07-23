@@ -1,0 +1,15 @@
+PARTE 1 
+1. ¿Por qué creen que es el mal rendimiento de este modelo?
+
+El mal rendimiento del modelo se debe a varios factores como lo es que tiene una arquitectura bastante simple, lo que limita mucho como tambien no esta del todo optimizado ya que se estan trabajando con operaciones básicas de NumPy.
+Asimismo estas limitaciones es que el dataset o la forma en que se procesan las imágenes puede no ser óptima. Puede ser como mencionan que es para material didactico, no es del todo complejo/completo.
+
+2. ¿Qué pueden hacer para mejorarlo?
+
+Para mejorar el rendimiento se puede ajustar learning rate o bien el ir probando con diferentes optimizers y batch sizes.
+Como tambien usar otros framworks, también se pueden usar modelos pre-entrenados o en el caso de las imagenes/datos aplicar diferentes transformaciones o más capas.
+
+3. ¿Cuáles son las razones para que el modelo sea tan lento?
+
+El modelo es lento debido a que hay varios loops implementados que pueden ser los que estan provocando overhead como también el ir recalculando operaciones.
+También hay falta de paralelización, y las operaciones se ejecutan en CPU usando NumPy, sin optimizaciones de bajo nivel.
