@@ -13,3 +13,12 @@ Como tambien usar otros framworks, también se pueden usar modelos pre-entrenado
 
 El modelo es lento debido a que hay varios loops implementados que pueden ser los que estan provocando overhead como también el ir recalculando operaciones.
 También hay falta de paralelización, y las operaciones se ejecutan en CPU usando NumPy, sin optimizaciones de bajo nivel.
+
+PARTE 2
+
+4. ¿Qué haría para mejorar el rendimiento del modelo?
+Lo que se haría para mejorar el rendimiento es agregar más capas en este caso convolucinales como también ir optimiznado hiperparámetros como learning rate y batch size, de igual forma aumentar el tamaño de las imagenes e ir implementando écnicas de fine-tuning con modelos.
+
+5. ¿Qué haría para disminuir las posibilidades de overfitting?
+
+Para disminuir las posibilidades de overfitting, implementaría la aplicación de transformaciones aleatorias a las imágenes como lo pueden ser las rotaciones, zoom, flip horizontal, cambios en brillo y contraste de manera que considero que esto aumenta la diversidad del conjunto de datos y hace que el modelo generalice mejor asi que al final sería aumentar el dataset. También implementaaría batch normalization después de las capas convolucionales para normalizar las activaciones, lo que estabiliza y acelera el entrenamiento, permitiendo también usar learning raates más altos. También se pueden ir agregando más  capas de dropout, ya que esto va a ir desactivandoaleatoriamente un porcentaje de neuronas durante el entrenamiento, lo que evita que el modelo dependa demasiado de características específicas.
